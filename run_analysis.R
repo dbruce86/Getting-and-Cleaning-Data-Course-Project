@@ -1,8 +1,5 @@
 # run_analysis.R
 
-# Set working directory on local machine
-setwd("C:/Users/110370/Documents/Coursera/GettingCleaningData/CourseProject")
-
 library(tidyr)
 library(dplyr)
 library(reshape)
@@ -207,4 +204,4 @@ long_tidy_data<-consolidated_data_melt %>% group_by(activity,subject,variable) %
 write.table(wide_tidy_data, file="wide_tidy_data.txt", row.name=FALSE)
 write.table(long_tidy_data, file="long_tidy_data.txt", row.name=FALSE)
 
-pring("All done!")
+print("All done!")
